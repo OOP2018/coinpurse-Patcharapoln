@@ -105,6 +105,7 @@ public class Purse {
 	public Coin[] withdraw(double amount) {
 		List<Coin> temp = new ArrayList<Coin>();
 		MoneyUtil.sortCoins(money);
+		Collections.reverse(money);
 		if (amount != 0) {
 			if (amount <= getBalance()) {
 				for (int i = 0; i < money.size(); i++) {
