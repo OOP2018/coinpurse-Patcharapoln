@@ -68,6 +68,7 @@ public class Coin implements Comparable<Coin> {
 
 	/**
 	 * return an information of a coin
+	 * @return value and currency of a coin
 	 */
 	public String toString() {
 		return this.value + "-" + this.currency;
