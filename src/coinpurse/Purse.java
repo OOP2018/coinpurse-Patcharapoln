@@ -97,8 +97,7 @@ public class Purse {
 	 * withdrawn from purse, or return null if cannot withdraw the amount
 	 * requested.
 	 * 
-	 * @param amount
-	 *            is the amount to withdraw
+	 * @param amount is the amount to withdraw
 	 * @return array of Coin objects for money withdrawn, or null if cannot
 	 *         withdraw requested amount.
 	 */
