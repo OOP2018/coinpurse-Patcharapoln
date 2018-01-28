@@ -14,7 +14,7 @@ import java.util.List;
 public class MoneyUtil {
 
 	/**
-	 * Sort a coin by compareto method in purse
+	 * Sort a coin by compareTo method in purse
 	 * 
 	 * @param coins
 	 *            a list of coins.
