@@ -10,7 +10,7 @@ public class BankNote implements Valuable {
 	private String currency;
 	private long serialNumber;
 	/** Started serial number of bank note */
-	private long ranNumber = 1000000;
+	private static long ranNumber = 1000000;
 
 	/**
 	 * A constructor of BankNote class , random serial number for bank note.

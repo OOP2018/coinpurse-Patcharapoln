@@ -13,7 +13,8 @@ import java.util.List;
  */
 public class Purse {
 	/** Collection of objects in the purse. */
-	List<Valuable> money = new ArrayList<Valuable>();
+	private List<Valuable> money = new ArrayList<Valuable>();
+	private Comparator<Valuable> comp = new ValueComparator();
 
 	/**
 	 * Capacity is maximum number of items the purse can hold. Capacity is set
@@ -103,7 +104,6 @@ public class Purse {
 	 *         withdraw requested amount.
 	 */
 	public Valuable[] withdraw(double amount) {
-		Comparator<Valuable> comp = new ValueComparator();
 		List<Valuable> temp = new ArrayList<Valuable>();
 		Collections.sort(money, comp);
 		Collections.reverse(money);
