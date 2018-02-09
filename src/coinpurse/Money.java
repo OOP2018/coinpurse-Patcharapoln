@@ -53,10 +53,11 @@ public class Money implements Valuable{
 	}
 	
 	/**
-	 * Compare a value between money.
-	 * @return -1 if coin value is less than another.
-	 * 		   0 if coins are equal.
-	 * 		   1 if coin is more than another.
+	 * Compare which money currency should come first if object have same
+	 * currency it will compare with value.
+	 * 
+	 * @return -1 if object a should come first. 0 if 2 objects are equal. 1 if
+	 *         object b should come first.
 	 */
 	@Override
 	public int compareTo(Valuable o) {
