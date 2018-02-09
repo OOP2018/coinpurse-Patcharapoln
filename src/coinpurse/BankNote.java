@@ -13,7 +13,7 @@ public class BankNote extends Money implements Valuable {
 	private static long nextSerialNumber = 1000000;
 
 	/**
-	 * A constructor of BankNote class , random serial number for bank note.
+	 * A constructor of BankNote class , set serial number for bank note.
 	 * @param value is value of bank note.
 	 * @param currency is currency of bank note.
 	 */
