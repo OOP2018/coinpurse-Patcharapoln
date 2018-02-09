@@ -51,7 +51,7 @@ public class PurseTest {
 
     
 
-    /** Insert some coins. Easy test. */
+    /** Insert money. Easy test. */
     @Test
     public void testInsert()
     {
@@ -177,7 +177,7 @@ public class PurseTest {
 	}
 	
 
-	/** Add 4 coins and then withdraw in pairs, but not in same order. */
+	/** Add money and then withdraw in pairs, but not in same order. */
 	@Test(timeout=1000)
 	public void testMultiWithdraw() {
 		Purse purse = new Purse(10);
