@@ -110,7 +110,7 @@ public class ConsoleDialog {
              double amount = scanline.nextDouble( );
              Valuable [] value = purse.withdraw(amount);
              if ( value == null ) 
-                System.out.printf("Sorry, couldn't withdraw %.2g %s\n", amount, CURRENCY);
+                System.out.printf("Sorry, couldn't withdraw %.2f %s\n", amount, CURRENCY);
              else {
                 System.out.print("You withdrew:");
                 for(int k=0; k<value.length; k++) {

@@ -6,8 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * A purse contains money. You can insert coins/ bank note, withdraw money, check the
- * balance, and check if the purse is full.
+ * A purse contains money. You can insert coins/ bank note, withdraw money,
+ * check the balance, and check if the purse is full.
  * 
  * @author Patcharapol Nirunpornputta
  */
@@ -99,27 +99,35 @@ public class Purse {
 	 * withdrawn from purse, or return null if cannot withdraw the amount
 	 * requested.
 	 * 
-	 * @param amount is the amount to withdraw
-	 * @return array of objects for money withdrawn, or null if cannot
-	 *         withdraw requested amount.
+	 * @param amount
+	 *            is the amount to withdraw
+	 * @return array of objects for money withdrawn, or null if cannot withdraw
+	 *         requested amount.
 	 */
 	public Valuable[] withdraw(double amount) {
+		Money value = new Money(amount, "BTC");
+		return withdraw(value);
+	}
+
+	public Valuable[] withdraw(Valuable amount) {
 		List<Valuable> temp = new ArrayList<Valuable>();
 		Collections.sort(money, comp);
 		Collections.reverse(money);
-		if (amount != 0) {
-			if (amount <= getBalance()) {
+		double remain = amount.getValue();
+		if (remain != 0) {
+			if (remain <= getBalance()) {
 				for (int i = 0; i < money.size(); i++) {
-					if (amount >= money.get(i).getValue()) {
-						amount = amount - money.get(i).getValue();
+					if (remain >= money.get(i).getValue() && amount.getCurrency().equalsIgnoreCase(money.get(i).getCurrency())) {
+						remain = remain - money.get(i).getValue();
 						temp.add(money.get(i));
 					}
 				}
-				if (amount == 0) {
-					for(Valuable c : temp){
+				if (remain == 0) {
+					for (Valuable c : temp) {
 						money.remove(c);
 					}
-				}else return null;
+				} else
+					return null;
 				Valuable[] value = new Valuable[temp.size()];
 				temp.toArray(value);
 				return value;
@@ -130,10 +138,10 @@ public class Purse {
 
 	/**
 	 * toString returns a string description of the purse contents.
+	 * 
 	 * @return a number of coins and a value of coins
 	 */
 	public String toString() {
-		return count()+" coins with value "+getBalance();
+		return count() + " coins with value " + getBalance();
 	}
 }
-
