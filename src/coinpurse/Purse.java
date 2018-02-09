@@ -109,6 +109,16 @@ public class Purse {
 		return withdraw(value);
 	}
 
+	/**
+	 * Withdraw the requested amount of money. Return an array of Coins
+	 * withdrawn from purse, or return null if cannot withdraw the amount
+	 * requested.
+	 * 
+	 * @param amount
+	 *            is the amount to withdraw
+	 * @return array of objects for money withdrawn, or null if cannot withdraw
+	 *         requested amount.
+	 */
 	public Valuable[] withdraw(Valuable amount) {
 		List<Valuable> temp = new ArrayList<Valuable>();
 		Collections.sort(money, comp);
