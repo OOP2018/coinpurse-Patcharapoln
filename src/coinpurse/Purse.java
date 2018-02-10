@@ -105,7 +105,7 @@ public class Purse {
 	 *         requested amount.
 	 */
 	public Valuable[] withdraw(double amount) {
-		Money value = new Money(amount, "BTC");
+		Money value = new Money(amount, "Baht");
 		return withdraw(value);
 	}
 
@@ -124,6 +124,7 @@ public class Purse {
 		Collections.sort(money, comp);
 		Collections.reverse(money);
 		double remain = amount.getValue();
+		if(remain == 0) return null;
 		if (remain != 0) {
 			if (remain <= getBalance()) {
 				for (int i = 0; i < money.size(); i++) {

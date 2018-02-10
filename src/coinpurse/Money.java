@@ -6,7 +6,6 @@ package coinpurse;
  *
  */
 public class Money implements Valuable{
-	
 	protected double value;
 	protected String currency;
 
