@@ -1,7 +1,9 @@
 package coinpurse;
+import java.util.ResourceBundle;
 
 public abstract class MoneyFactory {
 	private static MoneyFactory instance;
+	static long nextSerialNumber = 1000000;
 
 	public static MoneyFactory getInstance() {
 		return instance;
@@ -16,5 +18,8 @@ public abstract class MoneyFactory {
 		} catch (NumberFormatException e) {
 			throw new IllegalArgumentException(e);
 		}
+	}
+	public static void setMoneyFactory(MoneyFactory factory) {
+		MoneyFactory.instance = factory;
 	}
 }

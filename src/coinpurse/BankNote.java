@@ -6,21 +6,16 @@ package coinpurse;
  *
  */
 public class BankNote extends Money implements Valuable {
-	private double value;
-	private String currency;
 	private long serialNumber;
-	/** Started serial number of bank note */
-	private static long nextSerialNumber = 1000000;
 
 	/**
 	 * A constructor of BankNote class , set serial number for bank note.
 	 * @param value is value of bank note.
 	 * @param currency is currency of bank note.
 	 */
-	public BankNote(double value, String currency) {
+	public BankNote(double value, String currency,long serialNumber) {
 		super(value,currency);		
-		this.serialNumber = nextSerialNumber;
-		nextSerialNumber++;
+		this.serialNumber = serialNumber;
 	}
 
 	/**

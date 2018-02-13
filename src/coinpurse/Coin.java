@@ -20,6 +20,6 @@ public class Coin extends Money implements Valuable {
 	 * @return value and currency of a coin
 	 */
 	public String toString() {
-		return this.value + "-" + this.currency;
+		return this.value + "- coin" + this.currency;
 	}
 }

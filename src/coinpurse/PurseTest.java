@@ -34,9 +34,10 @@ public class PurseTest {
     	// nothing to initialize
     }
     
-    /** Make a coin with the default currency. To save typing "new Coin(...)" */
-    private Coin makeCoin(double value) {
-		return new Coin(value,CURRENCY);
+    /** Make a money with the default currency. To save typing "new Coin(...)" */
+	private Valuable makeMoney(double value) {
+		Valuable money = MoneyFactory.getInstance().createMoney(value);
+		return money;
 	}
 
     /** Easy test that the Purse constructor is working. */
