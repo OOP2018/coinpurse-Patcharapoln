@@ -150,9 +150,9 @@ public class Purse {
 	/**
 	 * toString returns a string description of the purse contents.
 	 * 
-	 * @return a number of coins and a value of coins
+	 * @return a number of elements and a value of money.
 	 */
 	public String toString() {
-		return count() + " coins with value " + getBalance();
+		return count() + " with value " + getBalance();
 	}
 }

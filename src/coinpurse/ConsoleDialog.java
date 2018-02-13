@@ -75,7 +75,7 @@ public class ConsoleDialog {
     	// If so then use them without prompting for more.
     	String inline = console.nextLine().trim();
     	if (inline.isEmpty()) {
-    		System.out.print("Enter value of coin(s) to deposit on one line: ");
+    		System.out.print("Enter value to deposit on one line: ");
     		inline = console.nextLine();
     	}
         // parse input line into numbers
