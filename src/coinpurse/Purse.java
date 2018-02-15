@@ -125,10 +125,10 @@ public class Purse {
 		Collections.reverse(money);
 		double remain = amount.getValue();
 		if(remain == 0) return null;
-		if (remain != 0) {
+		else {
 			if (remain <= getBalance()) {
 				for (int i = 0; i < money.size(); i++) {
-					if (remain >= money.get(i).getValue() && amount.getCurrency().equalsIgnoreCase(money.get(i).getCurrency())) {
+					if (remain >= money.get(i).getValue() && money.get(i).getCurrency().equalsIgnoreCase(amount.getCurrency())) {
 						remain = remain - money.get(i).getValue();
 						temp.add(money.get(i));
 					}

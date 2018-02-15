@@ -5,7 +5,7 @@ package coinpurse;
  * @author Patcharapol Nirunpornputta
  *
  */
-public class Coin extends Money implements Valuable {
+public class Coin extends Money  {
 	/**
 	 * A constructor of coin class
 	 * @param value of coins
@@ -20,6 +20,6 @@ public class Coin extends Money implements Valuable {
 	 * @return value and currency of a coin
 	 */
 	public String toString() {
-		return this.value + "- coin" + this.currency;
+		return this.getValue() + "- coin " + this.getCurrency();
 	}
 }
