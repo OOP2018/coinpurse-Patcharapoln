@@ -8,13 +8,15 @@ import java.util.ResourceBundle;
  */
 public abstract class MoneyFactory {
 	private static MoneyFactory instance;
-	static long nextSerialNumber = 1000000;
 
 	/**
 	 * Return an instance of MoneyFactory.
 	 * @return an instance of MoneyFactory.
 	 */
 	public static MoneyFactory getInstance() {
+		if(instance == null) {
+			instance = FileReader.readFile();
+		}
 		return instance;
 	}
 

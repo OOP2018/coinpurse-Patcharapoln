@@ -20,6 +20,6 @@ public class Coin extends Money  {
 	 * @return value and currency of a coin
 	 */
 	public String toString() {
-		return this.getValue() + "- coin " + this.getCurrency();
+		return this.getValue()  +" "+ this.getCurrency()+ " coin";
 	}
 }

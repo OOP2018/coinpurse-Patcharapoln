@@ -7,21 +7,38 @@ package coinpurse;
  *
  */
 public class ThaiMoneyFactory extends MoneyFactory {
-	private String currency = "Baht";
+	static long nextSerialNumber = 1000000;
+	private double[] marray = { 0.25, 0.5, 1, 2, 5, 10, 20, 50, 100, 500, 1000 };
 
 	/**
 	 * Create Thai money with double value.
+	 * 
 	 * @return Thai money with value and currency.
-	 * @throws IllegalArgumentException when value is not valid.
+	 * @throws IllegalArgumentException
+	 *             when value is not valid.
 	 */
 	@Override
 	public Valuable createMoney(double value) throws IllegalArgumentException {
-		if (value == 1 || value == 2 || value == 5 || value == 10) {
-			return new Coin(value, currency);
-		} else if (value == 20 || value == 50 || value == 100 || value == 500 || value == 1000) {
-			return new BankNote(value, currency, this.nextSerialNumber++);
-		} else
-			throw new IllegalArgumentException();
+		for (double thai : marray) {
+			if (thai == value) {
+				if (thai < 1) {
+					return new Coin(value, "Stang");
+				}
+				if (thai <= 10) {
+					return new Coin(value, "Baht");
+				} else {
+					return new BankNote(value, "Baht", this.nextSerialNumber++);
+				}
+			}
+		}
+		throw new IllegalArgumentException();
+	}
+	
+	public static void main(String[] args) {
+		MoneyFactory thai = MoneyFactory.getInstance();
+		Valuable m = thai.createMoney(10);
+		System.out.println(m);
+		
 	}
 
 }

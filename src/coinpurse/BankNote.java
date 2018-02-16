@@ -19,17 +19,6 @@ public class BankNote extends Money {
 		super(value,currency);		
 		this.serialNumber = serialNumber;
 	}
-	
-	/**
-	 * A constructor of BankNote class , set serial number for bank note.
-	 * @param value is value of bank note.
-	 * @param currency is currency of bank note.
-	 * 
-	 */
-	public BankNote(double value, String currency) {
-		super(value,currency);		
-		this.serialNumber = 1000000;
-	}
 
 	/**
 	 * Return a serial number of bank note.
