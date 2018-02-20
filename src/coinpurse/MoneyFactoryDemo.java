@@ -32,9 +32,10 @@ public class MoneyFactoryDemo {
 		// Create sen coin.
 		Valuable sen = factory2.createMoney(0.1);
 		System.out.println(sen.toString());
-		// Create ringgit bank notes.
+		// Create ringgit bank note.
 		Valuable ringgit = factory2.createMoney(10);
-		Valuable ringgit2 = factory2.createMoney(100);
+		// Create String ringgit bank notes.
+		Valuable ringgit2 = factory2.createMoney("100");
 		System.out.println(ringgit.toString());
 		System.out.println(ringgit2.toString());
 		// Create invalid money.
