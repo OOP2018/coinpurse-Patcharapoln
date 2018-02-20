@@ -23,13 +23,13 @@ public class MalayMoneyFactory extends MoneyFactory {
 		for (double malay : marray) {
 			if (malay == value) {
 				if (malay < 1) {
-					return new Coin(value, "Sen");
+					return new Coin(value*100, "Sen");
 				} else {
 					return new BankNote(value, "Ringgit", this.nextSerialNumber++);
 				}
 			}
 		}
-		throw new IllegalArgumentException();
+		throw new IllegalArgumentException("Invalid value");
 	}
 
 }

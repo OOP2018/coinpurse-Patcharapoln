@@ -22,7 +22,7 @@ public class ThaiMoneyFactory extends MoneyFactory {
 		for (double thai : marray) {
 			if (thai == value) {
 				if (thai < 1) {
-					return new Coin(value, "Stang");
+					return new Coin(value*100, "Stang");
 				}
 				if (thai <= 10) {
 					return new Coin(value, "Baht");
@@ -31,7 +31,7 @@ public class ThaiMoneyFactory extends MoneyFactory {
 				}
 			}
 		}
-		throw new IllegalArgumentException();
+		throw new IllegalArgumentException("Invalid value");
 	}
 	
 	public static void main(String[] args) {

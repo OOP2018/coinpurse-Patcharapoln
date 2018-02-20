@@ -1,5 +1,4 @@
 package coinpurse;
-import java.util.ResourceBundle;
 
 /**
  * MoneyFactory is a class that create money with value and currency.
