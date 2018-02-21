@@ -34,12 +34,13 @@ public abstract class MoneyFactory {
 	 * @throws IllegalArgumentException when value is not valid.
 	 */
 	public Valuable createMoney(String value) throws IllegalArgumentException {
+		double val = 0;
 		try {
-			double val = Double.parseDouble(value);
-			return createMoney(val);
+			val = Double.parseDouble(value);
 		} catch (NumberFormatException e) {
-			throw new IllegalArgumentException(e);
+			throw new IllegalArgumentException("Invalid value",e);
 		}
+		return createMoney(val);
 	}
 	
 	/**
