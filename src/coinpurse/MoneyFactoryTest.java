@@ -35,7 +35,7 @@ public class MoneyFactoryTest {
 	}
 	
 	/**
-	 * Test create stang coins , Baht coin and Bath BankNotes.
+	 * Test create Baht coins , Baht coin and Bath BankNotes.
 	 */
 	@Test
 	public void testCreateThaiMoney() {
@@ -43,19 +43,19 @@ public class MoneyFactoryTest {
 		MoneyFactory factory = MoneyFactory.getInstance();
 		assertEquals(5, factory.createMoney(5).getValue(),TOL);
 		assertEquals("Baht", factory.createMoney(5).getCurrency());
-		assertEquals("Stang", factory.createMoney(0.5).getCurrency());
+		assertEquals("Baht", factory.createMoney(0.5).getCurrency());
 		assertEquals(20, factory.createMoney(20).getValue(),TOL);
 	}
 
 	/**
-	 * Test create sen coins, Ringgit BankNtes.
+	 * Test create Ringgit coins,Ringgit BankNtes.
 	 */
 	@Test
 	public void testCreateMalayMoney() {
 		MoneyFactory.setMoneyFactory(new MalayMoneyFactory());
 		MoneyFactory factory = MoneyFactory.getInstance();
 		assertEquals(1, factory.createMoney(1).getValue(),TOL);
-		assertEquals("Sen", factory.createMoney(0.05).getCurrency());
+		assertEquals("Ringgit", factory.createMoney(0.05).getCurrency());
 		assertEquals("Ringgit", factory.createMoney(20).getCurrency());
 		assertEquals(20, factory.createMoney(20).getValue(),TOL);
 	}

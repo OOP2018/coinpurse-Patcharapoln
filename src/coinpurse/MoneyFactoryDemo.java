@@ -13,9 +13,6 @@ public class MoneyFactoryDemo {
 		System.out.println(factory1 == factory2);
 		
 		System.out.println("Thai Money");
-		// Create stang coin.
-		Valuable stang = factory1.createMoney(0.5);
-		System.out.println(stang.toString());
 		// Create baht coin.
 		Valuable coin = factory1.createMoney(10);
 		System.out.println(coin.toString());
@@ -29,9 +26,9 @@ public class MoneyFactoryDemo {
 		factory2 = MoneyFactory.getInstance();	
 		System.out.println();
 		System.out.println("Malay Money");
-		// Create sen coin.
-		Valuable sen = factory2.createMoney(0.1);
-		System.out.println(sen.toString());
+		// Create Ringgit coin.
+		Valuable ringcoin = factory2.createMoney(0.1);
+		System.out.println(ringcoin.toString());
 		// Create ringgit bank note.
 		Valuable ringgit = factory2.createMoney(10);
 		// Create String ringgit bank notes.
