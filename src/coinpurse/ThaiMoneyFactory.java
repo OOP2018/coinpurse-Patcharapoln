@@ -21,9 +21,6 @@ public class ThaiMoneyFactory extends MoneyFactory {
 	public Valuable createMoney(double value) throws IllegalArgumentException {
 		for (double thai : marray) {
 			if (thai == value) {
-				if (thai < 1) {
-					return new Coin(value, "Baht");
-				}
 				if (thai <= 10) {
 					return new Coin(value, "Baht");
 				} else {
