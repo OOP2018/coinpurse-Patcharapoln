@@ -22,7 +22,7 @@ public class ThaiMoneyFactory extends MoneyFactory {
 		for (double thai : marray) {
 			if (thai == value) {
 				if (thai < 1) {
-					return new Coin(value*100, "Stang");
+					return new Coin(value, "Baht");
 				}
 				if (thai <= 10) {
 					return new Coin(value, "Baht");
@@ -38,7 +38,5 @@ public class ThaiMoneyFactory extends MoneyFactory {
 		MoneyFactory thai = MoneyFactory.getInstance();
 		Valuable m = thai.createMoney(10);
 		System.out.println(m);
-		
 	}
-
 }
