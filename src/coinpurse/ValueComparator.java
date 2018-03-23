@@ -18,10 +18,8 @@ public class ValueComparator implements Comparator<Valuable> {
 	 *         object b should come first.
 	 */
 	public int compare(Valuable a, Valuable b) {
-		if (a.getCurrency().compareTo(b.getCurrency()) < 1)
-			return -1;
-		else if (a.getCurrency().compareTo(b.getCurrency()) > 1)
-			return 1;
+		if (a.getCurrency().compareTo(b.getCurrency()) != 0)
+			return a.getCurrency().compareTo(b.getCurrency());
 		else {
 			if (a.getValue() < b.getValue())
 				return -1;
