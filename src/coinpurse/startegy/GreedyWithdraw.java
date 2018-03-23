@@ -1,4 +1,4 @@
-package strategy;
+package coinpurse.startegy;
 
 import java.util.ArrayList;
 import java.util.Collections;

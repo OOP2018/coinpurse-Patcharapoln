@@ -1,4 +1,4 @@
-package strategy;
+package coinpurse.startegy;
 
 import static org.junit.Assert.*;
 

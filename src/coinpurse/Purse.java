@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import strategy.GreedyWithdraw;
-import strategy.RecursiveWithdraw;
-import strategy.WithdrawStrategy;
+import coinpurse.startegy.GreedyWithdraw;
+import coinpurse.startegy.RecursiveWithdraw;
+import coinpurse.startegy.WithdrawStrategy;
 
 /**
  * A purse contains money. You can insert coins/ bank note, withdraw money,
