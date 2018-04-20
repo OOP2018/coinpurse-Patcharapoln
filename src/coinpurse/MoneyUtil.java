@@ -56,7 +56,7 @@ public class MoneyUtil {
 	public static <E extends Comparable<? super E>> E max(E... args) throws IllegalArgumentException {
 		int size = args.length - 1;
 		E max = null;
-		E temp = args[0];
+		E temp = args[0];   
 		for (int i = 0; i < size; i++) {
 			if (temp.compareTo(args[i]) > 0)
 				max = temp;
@@ -66,8 +66,4 @@ public class MoneyUtil {
 		return max;
 	}
 
-	public static void main(String[] args) {
-		String max = MoneyUtil.max( "dog", "zebra", "cat" );
-		System.out.println(max);
-	}
 }
