@@ -1,12 +1,10 @@
 package coinpurse.startegy;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import coinpurse.Valuable;
-import coinpurse.ValueComparator;
+
 
 /**
  * Greedy strategy for withdraw money.
