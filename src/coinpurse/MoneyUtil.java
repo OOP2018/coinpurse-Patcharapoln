@@ -53,7 +53,9 @@ public class MoneyUtil {
 	 * @throws IllegalArgumentException
 	 *             if no arguments given.
 	 */
-	public static <E extends Comparable<? super E>> E max(E... args) throws IllegalArgumentException {
+	public static <E extends Comparable<? super E>> E max(E... args) {
+		if (args == null)
+			throw new IllegalArgumentException();
 		E max = args[0];
 		for (int i = 0; i < args.length; i++) {
 			if (max.compareTo(args[i]) < 0) {
